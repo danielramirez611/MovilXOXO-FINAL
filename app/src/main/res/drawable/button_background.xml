@@ -1,0 +1,15 @@
+<!-- res/drawable/button_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+
+    <solid android:color="@color/rosado" /> <!-- Cambia el color según tus preferencias -->
+
+
+    <corners android:radius="8dp" /> <!-- Ajusta el radio de las esquinas según desees -->
+
+
+    <stroke
+        android:width="10dp"
+        android:color="@color/borde_paypal" /> <!-- Añade un borde con un color específico -->
+</shape>

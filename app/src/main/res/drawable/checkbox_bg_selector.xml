@@ -1,0 +1,10 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Estado cuando el CheckBox está marcado -->
+
+    <!-- Estado cuando el CheckBox no está marcado -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent" /> <!-- Color transparente cuando no está marcado -->
+        </shape>
+    </item>
+</selector>

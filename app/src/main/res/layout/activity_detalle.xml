@@ -1,0 +1,265 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:background="@drawable/degradado"
+    android:layout_height="match_parent"
+    tools:context="com.xoxo.xoxo.Detalle.DetalleActivity">
+
+    <!-- Imagen que ocupa toda la parte superior de la pantalla -->
+
+    <!-- Flecha en la esquina superior izquierda -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="-8dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_8"
+        app:layout_constraintDimensionRatio="8:9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/arrowIcon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="150dp"
+        android:background="@drawable/rosado_boton2"
+        android:src="@drawable/arrow"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/imageView" />
+
+
+
+    <!-- Carrito en la esquina inferior izquierda -->
+    <ImageButton
+        android:id="@+id/shopIcon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="0dp"
+        android:background="@drawable/rosado_boton2"
+        android:src="@drawable/bag"
+        app:layout_constraintBottom_toTopOf="@id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Translucent rectangle with border and drop shadow -->
+    <View
+        android:id="@+id/rectangle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-60dp"
+        android:background="@drawable/rectangle_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView" />
+
+    <!-- Primer texto -->
+    <TextView
+        android:id="@+id/txtColeccion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="30dp"
+        android:text="Mantequillas Emulcionadas"
+        android:textColor="#F056A5"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/rectangle"
+        app:layout_constraintTop_toTopOf="@id/rectangle" />
+
+    <!-- Segundo texto -->
+    <TextView
+        android:id="@+id/txtProducto"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Algodón dulce"
+        android:textColor="@color/black"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="-210dp"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="@id/txtColeccion"
+        app:layout_constraintStart_toStartOf="@id/txtColeccion"
+        app:layout_constraintTop_toBottomOf="@id/txtColeccion"
+        android:layout_marginTop="2dp"/>
+    <!-- Rectángulo rojo para la oferta -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/red_rectangle2"
+        android:layout_marginLeft="180dp"
+        android:layout_marginTop="-4dp"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="@+id/txtColeccion"
+        app:layout_constraintTop_toTopOf="@+id/txtColeccion">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stock:"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:padding="4dp" />
+        <TextView
+            android:id="@+id/stock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="50"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:padding="4dp" />
+    </LinearLayout>
+
+
+    <RatingBar
+        android:id="@+id/ratingBar1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-18dp"
+        android:layout_marginRight="200dp"
+        android:progressTint="@android:color/holo_orange_light"
+        android:rating="5"
+        android:scaleX="0.3"
+        android:scaleY="0.3"
+        app:layout_constraintEnd_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/txtProducto" />
+
+    <TextView
+        android:id="@+id/textDescripcion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:text="text"
+        android:textSize="15sp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="26.5dp"
+        android:layout_marginTop="-28dp"
+        android:gravity="start|top"
+        app:layout_constraintStart_toStartOf="@id/ratingBar1"
+        app:layout_constraintTop_toBottomOf="@id/ratingBar1" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Precio"
+        android:textColor="#9B9B9B"
+        android:textStyle="normal|bold"
+        android:textSize="20sp"
+        android:layout_marginTop="30dp"
+        android:gravity="start|top"
+        app:layout_constraintStart_toStartOf="@id/textDescripcion"
+        app:layout_constraintTop_toBottomOf="@id/textDescripcion" />
+
+    <!-- Precio -->
+    <TextView
+        android:id="@+id/textprecio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="S/12"
+        android:layout_marginLeft="-55dp"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_marginTop="1dp"
+        app:layout_constraintStart_toEndOf="@id/textView4"
+        app:layout_constraintTop_toBottomOf="@id/textView4" />
+
+    <!-- Precio con descuento -->
+    <TextView
+        android:id="@+id/descuento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="15"
+        android:textColor="@color/rojo"
+        android:textSize="18sp"
+        android:layout_marginLeft="110dp"
+        android:textStyle="bold"
+        android:layout_marginTop="6dp"
+        app:layout_constraintLeft_toLeftOf="@id/textView4"
+        app:layout_constraintTop_toBottomOf="@id/textView4" />
+
+
+
+
+    <!-- Botón de mensaje -->
+    <ImageButton
+        android:id="@+id/btnWhat"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/rosado_boton2"
+        android:layout_marginStart="110dp"
+        android:src="@drawable/message"
+        app:layout_constraintTop_toTopOf="@+id/descuento"
+        app:layout_constraintStart_toStartOf="@id/descuento"
+        app:layout_constraintBottom_toBottomOf="@id/descuento" />
+
+    <!-- Botón de pagina -->
+    <ImageButton
+        android:id="@+id/btnRest"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/rosado_boton2"
+        android:layout_marginStart="70dp"
+        android:src="@drawable/world"
+        app:layout_constraintTop_toTopOf="@+id/btnWhat"
+        app:layout_constraintStart_toStartOf="@id/btnWhat"
+        app:layout_constraintBottom_toBottomOf="@id/btnWhat" />
+
+
+
+    <Button
+        android:id="@+id/btnn"
+        android:layout_width="340dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/rosado_boton_ingredientes"
+        android:drawablePadding="8dp"
+        android:gravity="center"
+        android:paddingStart="-140dp"
+        android:paddingEnd="36dp"
+        android:text="Ingredientes"
+        android:textColor="@android:color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:stateListAnimator="@null"
+        app:backgroundTint="@color/colorbtningredients"
+        app:layout_constraintTop_toBottomOf="@id/btnWhat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+    <Button
+        android:id="@+id/btnAgregar"
+        android:layout_width="340dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="90dp"
+        android:background="@drawable/rosado_boton"
+        android:drawableLeft="@drawable/bag_2"
+        android:drawablePadding="8dp"
+        android:gravity="center"
+        android:paddingStart="36dp"
+        android:paddingEnd="36dp"
+        android:text="Agregar al carrito"
+        android:textColor="@android:color/black"
+        android:textSize="26sp"
+        android:textStyle="bold"
+    android:stateListAnimator="@null"
+    app:backgroundTint="@color/colorbtn"
+    app:layout_constraintTop_toBottomOf="@id/btnWhat"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

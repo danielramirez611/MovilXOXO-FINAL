@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!-- Permiso para acceder a Internet -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- Permiso para acceder al estado de la red -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name="com.xoxo.xoxo.App"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_logo_round"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_logo_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.XOXOSKINCARE"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name="com.xoxo.xoxo.PagoActivity"
+            android:exported="false" />
+        <!-- Other Activities -->
+        <activity
+            android:name=".PerfilActivity"
+            android:exported="false"
+            android:theme="@style/Theme.XOXOSKINCARE" />
+        <activity
+            android:name=".Favorito.FavoritoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Notificacion.NotificacionActivity"
+            android:exported="false"
+            android:theme="@style/Theme.XOXOSKINCARE" />
+        <activity
+            android:name=".Comprar.ComprarActivity"
+            android:exported="false" />
+
+        <activity
+            android:name="com.xoxo.xoxo.Detalle.DetalleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Inicio.InicioActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.xoxo.xoxo.Resgitrar.CrearActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.XOXOSKINCARE">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <!-- Intent-filter para el esquema de PayPal -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="palpalpay"
+                    android:scheme="com.skincare.xoxo" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.xoxo.xoxo.Login.RegisterActivity" />
+    </application>
+
+</manifest>

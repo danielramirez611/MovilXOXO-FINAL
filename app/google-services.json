@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "954021780401",
+    "project_id": "xoxoskincaretec",
+    "storage_bucket": "xoxoskincaretec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:954021780401:android:f9af776b9a227f5bcdbb90",
+        "android_client_info": {
+          "package_name": "com.skincare.xoxo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "954021780401-dnscd1jgt4bduigcg78jv0t6c5er4c79.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.skincare.xoxo",
+            "certificate_hash": "ad9a52a83584b9f1e168d1be14cbc26913dacaae"
+          }
+        },
+        {
+          "client_id": "954021780401-jus52rf8acr2jtg5t2bj4f58paafueo6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmzw58OCvDmGKFPDItSKdaSVbhkx_Ycb4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "954021780401-jus52rf8acr2jtg5t2bj4f58paafueo6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

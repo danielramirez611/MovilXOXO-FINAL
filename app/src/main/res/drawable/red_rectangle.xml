@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- red_rectangle.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#FF0000" /> <!-- Color rojo -->
+    <corners android:radius="40dp" /> <!-- Esquinas redondeadas -->
+</shape>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="plomo">#838383</color>
+    <color name="black">#000000</color>
+    <color name="negro">#000000</color>
+    <color name="colormenu">#FFE7F2</color>
+    <color name="colorbtn">#F061A9</color>
+    <color name="colorbtnf">#ED1483</color>
+    <color name="rojo">#FF1100</color>
+    <color name="principal">#FEECF0</color>
+    <color name="borde_paypal">#1AB3FF</color>
+
+    <color name="colorbtningredients">#F49BCE</color>
+
+    <color name="white">#FFFFFFFF</color>
+    <color name="rosado">#F59CCF</color>
+
+</resources>

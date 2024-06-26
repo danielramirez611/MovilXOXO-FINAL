@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:background="@drawable/degradado"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    tools:context="com.xoxo.xoxo.Resgitrar.CrearActivity">
+
+    <ImageView
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center_horizontal"
+    android:src="@drawable/logo"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:text="Crear cuenta"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        android:textStyle="bold" />
+    <EditText
+        android:id="@+id/txtNombre"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:paddingLeft="10dp"
+        android:paddingEnd="8dp"
+        android:paddingStart="8dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:maxLength="50"
+        android:background="@drawable/text"
+        android:drawableLeft="@drawable/img_3"
+        android:drawablePadding="8dp"
+        />
+    <EditText
+        android:id="@+id/txtApellido"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:paddingLeft="10dp"
+        android:paddingEnd="8dp"
+        android:paddingStart="8dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:maxLength="50"
+        android:background="@drawable/text"
+        android:drawableLeft="@drawable/img_3"
+        android:drawablePadding="8dp"
+        />
+    <EditText
+        android:id="@+id/txtEmail"
+
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:paddingLeft="10dp"
+        android:paddingEnd="8dp"
+        android:paddingStart="8dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/text"
+        android:drawableLeft="@drawable/img_7"
+        android:drawablePadding="8dp"
+        android:inputType="textEmailAddress"/>
+    <!-- Password Input -->
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/txtClave"
+
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:paddingLeft="10dp"
+        android:paddingEnd="8dp"
+        android:paddingStart="8dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:maxLength="16"
+        app:passwordToggleEnabled="true"
+        android:drawablePadding="8dp"
+        android:background="@drawable/text"
+        android:drawableLeft="@drawable/img_4"
+        android:inputType="textPassword"/>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnRegistrar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:textColor="@color/white"
+        android:layout_marginTop="43dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:backgroundTint="@color/black"
+        app:cornerRadius="30dp"
+        android:text="Registrarse"
+        android:textSize="18dp"
+        android:layout_gravity="center_horizontal" />
+
+
+
+</LinearLayout>
