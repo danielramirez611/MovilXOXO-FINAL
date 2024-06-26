@@ -12,7 +12,7 @@ import com.paypal.checkout.createorder.UserAction
 
 class App : Application() {
 
-    var clientID = "ARl6ePgXm6ek9hY2WLyYfRu4EcBpF_A0tMIAXvUJgmoFH3cCSNdobIk-lQfawXg_Azl1tXFlIMb_PjLc"
+    var clientID = "dd"
     var returnUrl = "com.skincare.xoxo://paypalpay"
 
     @RequiresApi(Build.VERSION_CODES.M)
