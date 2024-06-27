@@ -105,15 +105,19 @@ class ComprarActivity : AppCompatActivity() {
         configureBottomNavigation()
 
 
+// ComprarActivity
+        btnCompra.setOnClickListener {
+            val total = textTotalValue.text.toString().substring(2).toDouble()
+            val nombresProductos = listComprar.joinToString(", ") { it.nombreProducto } // concatenar nombres de productos
 
-
-
-        btnCompra.setOnClickListener{
-            val total = textTotalValue.text.toString().substring(2).toDouble()  // Obtiene el valor numérico del total
-            val intent = Intent(this, PagoActivity::class.java)
-            intent.putExtra("total_compra", total)  // Pasa el total como extra al Intent
+            val intent = Intent(this, PagoActivity::class.java).apply {
+                putExtra("total_compra", total)
+                putExtra("nombres_productos", nombresProductos)
+            }
             startActivity(intent)
         }
+
+
     }
 
     private fun calcularTotal(listComprar: List<ProductosColeccion>) {

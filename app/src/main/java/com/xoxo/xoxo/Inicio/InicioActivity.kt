@@ -144,15 +144,19 @@ class InicioActivity : AppCompatActivity() {
         })
 
         // Observar cambios en el campo de búsqueda
+
         binding.editTextSearch.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                adapterProducto.filter(s.toString()) // Filtrar productos según el texto ingresado
+                val searchText = s.toString().toLowerCase() // Convertir a minúsculas
+
+                adapterProducto.filter(searchText) // Filtrar productos según el texto ingresado (no sensible a mayúsculas/minúsculas)
             }
 
             override fun afterTextChanged(s: Editable?) {}
         })
+
 
         // Realizar la solicitud API a través del ViewModel de productos
         viewModelProducto.fetchProductos()

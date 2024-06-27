@@ -101,43 +101,57 @@
 
         </ViewFlipper>
 
-
         <!-- Email Input -->
-        <EditText
-            android:id="@+id/txtEmail"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/emailTextInputLayout"
             android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:paddingEnd="8dp"
-            android:paddingStart="8dp"
             android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp"
-            android:maxLength="50"
-            android:paddingLeft="10dp"
-            android:background="@drawable/text"
-            android:drawableLeft="@drawable/img_3"
-            android:drawablePadding="8dp"
-            android:inputType="textEmailAddress"/>
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <EditText
+                android:id="@+id/txtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Correo"
+                android:inputType="textEmailAddress"
+                android:maxLength="50"
+                android:paddingStart="10dp"
+                android:paddingEnd="8dp"
+                android:drawableLeft="@drawable/img_7"
+                android:background="@drawable/text"
+                android:drawablePadding="8dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
 
         <!-- Password Input -->
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/txtPassword"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passwordTextInputLayout"
             android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:paddingEnd="8dp"
-            android:paddingStart="8dp"
             android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp"
-            android:maxLength="50"
-            android:paddingLeft="10dp"
             app:passwordToggleEnabled="true"
-            android:drawablePadding="8dp"
-            android:background="@drawable/text"
-            android:drawableLeft="@drawable/img_4"
-            android:inputType="textPassword"/>
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <EditText
+                android:id="@+id/txtPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Contraseña"
+                android:inputType="textPassword"
+                android:maxLength="16"
+                android:paddingStart="10dp"
+                android:paddingEnd="8dp"
+                android:drawableLeft="@drawable/img_4"
+            android:drawablePadding="16dp"
+            android:background="@drawable/text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
 
         <TextView
             android:layout_width="wrap_content"
