@@ -1,7 +1,9 @@
 package com.skincare.xoxo
 
+import android.app.Activity
 import android.content.Intent
 import android.content.SharedPreferences
+import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.provider.MediaStore
@@ -20,6 +22,7 @@ import com.skincare.xoxo.Favorito.FavoritoActivity
 import com.skincare.xoxo.Inicio.InicioActivity
 import com.skincare.xoxo.databinding.ActivityPerfilBinding
 import com.xoxo.xoxo.Login.RegisterActivity
+import java.io.ByteArrayOutputStream
 
 class PerfilActivity : AppCompatActivity() {
 
@@ -48,7 +51,7 @@ class PerfilActivity : AppCompatActivity() {
         // Actualizar la UI con la información de FirebaseUser
         updateUI(user)
 
-        // Configurar el listener para el ImageView
+        // Configurar el listener para el ImageView de perfil
         binding.logoImageView.setOnClickListener {
             pickImage()
         }
@@ -118,6 +121,30 @@ class PerfilActivity : AppCompatActivity() {
         startActivityForResult(pickIntent, PICK_IMAGE_REQUEST)
     }
 
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == PICK_IMAGE_REQUEST && resultCode == Activity.RESULT_OK && data != null) {
+            val selectedImageUri = data.data
+            val bitmap = MediaStore.Images.Media.getBitmap(contentResolver, selectedImageUri)
+            val encodedImage = bitmapToBase64(bitmap)
+
+            // Guardar la imagen codificada en SharedPreferences
+            val editor = sharedPref.edit()
+            editor.putString("encodedImage", encodedImage)
+            editor.apply()
+
+            // Mostrar la imagen seleccionada en ImageView
+            binding.logoImageView.setImageBitmap(bitmap)
+        }
+    }
+
+    private fun bitmapToBase64(bitmap: Bitmap): String {
+        val byteArrayOutputStream = ByteArrayOutputStream()
+        bitmap.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream)
+        val byteArray = byteArrayOutputStream.toByteArray()
+        return Base64.encodeToString(byteArray, Base64.DEFAULT)
+    }
+
     private fun cerrarSesion() {
         auth.signOut()
 
@@ -130,7 +157,6 @@ class PerfilActivity : AppCompatActivity() {
         startActivity(intent)
         finish()
     }
-
 
     companion object {
         const val PICK_IMAGE_REQUEST = 1
