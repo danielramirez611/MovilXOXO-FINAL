@@ -220,29 +220,10 @@
 
 
     <Button
-        android:id="@+id/btnn"
-        android:layout_width="340dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/rosado_boton_ingredientes"
-        android:drawablePadding="8dp"
-        android:gravity="center"
-        android:paddingStart="-140dp"
-        android:paddingEnd="36dp"
-        android:text="Ingredientes"
-        android:textColor="@android:color/black"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        android:stateListAnimator="@null"
-        app:backgroundTint="@color/colorbtningredients"
-        app:layout_constraintTop_toBottomOf="@id/btnWhat"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-    <Button
         android:id="@+id/btnAgregar"
         android:layout_width="340dp"
         android:layout_height="70dp"
-        android:layout_marginTop="90dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/rosado_boton"
         android:drawableLeft="@drawable/bag_2"
         android:drawablePadding="8dp"
