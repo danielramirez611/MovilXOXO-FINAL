@@ -6,6 +6,6 @@
         android:endColor="#EF58A5"
         android:type="linear"
         android:angle="0"/>
-    <corners android:radius="10dp" /> <!-- Radio de borde -->
+    <corners android:radius="50dp" /> <!-- Radio de borde -->
 
 </shape>

@@ -33,5 +33,12 @@
         <item name="android:padding">8dp</item>
     </style>
 
+    <style name="radius3">
+            <item name="cornerFamily">rounded</item>
+            <item name="cornerSize">50%</item>
+
+
+    </style>
+
 
 </resources>

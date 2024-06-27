@@ -3,33 +3,41 @@
     android:layout_width="match_parent"
     android:layout_height="200dp">
 
+    <!-- Imagen circular -->
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageNotificacion"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:src="@drawable/logo"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp"
+        app:shapeAppearanceOverlay="@style/radius3" />
+    <!-- Contenedor de notificación con bordes ovalados -->
     <RelativeLayout
         android:id="@+id/notificationContainer"
-        android:layout_width="match_parent"
-        android:layout_height="160dp"
+        android:layout_width="0dp"
+        android:layout_height="140dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="20dp"
-        android:background="@drawable/degradado3"
-        app:layout_constraintTop_toTopOf="parent">
+        android:background="@drawable/rounded_background"
+        app:layout_constraintStart_toEndOf="@id/imageNotificacion"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:background="@drawable/degradado3"
+            android:layout_height="100dp">
 
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/imageNotificacion"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:scaleType="centerCrop"
-                app:shapeAppearanceOverlay="@style/radius"
-                android:src="@drawable/carusel3"
-                android:layout_marginTop="30dp"
-                android:layout_marginLeft="15dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <!-- Texto -->
+            <!-- Texto de la notificación -->
             <TextView
                 android:id="@+id/textNotificacion"
                 android:layout_width="0dp"
@@ -41,8 +49,10 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="15dp"
                 android:maxLines="5"
+                android:textAlignment="center"
+                android:gravity="center"
                 android:textSize="12sp"
-                app:layout_constraintStart_toEndOf="@id/imageNotificacion"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent" />

@@ -54,6 +54,7 @@ class InicioActivity : AppCompatActivity() {
     private lateinit var adapterProducto: InicioAdapter
     private lateinit var adapterColeccion: ColeccionAdapter
     private lateinit var usernameTextView: TextView // Declaración de usernameTextView
+    private lateinit var badgeView: View // Declaración de badgeView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
